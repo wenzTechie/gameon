@@ -1,0 +1,22 @@
+{
+  "name": "gameon",
+  "version": "1.0.0",
+  "description": "Sign up page for website.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/_main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenzTechie/gameon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenzTechie/gameon/issues"
+  },
+  "homepage": "https://github.com/wenzTechie/gameon#readme",
+  "dependencies": {
+    "sass": "^1.37.5"
+  }
+}
