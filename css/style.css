@@ -1,3 +1,7 @@
+.stop-scroll {
+  overflow: hidden;
+}
+
 :root {
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
   --font-slab: var(--font-default);
