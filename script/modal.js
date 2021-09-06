@@ -94,8 +94,13 @@ const validQuantity = () => {
     error.classList.add("error-active");
     return -1;
   }
-  const toInt = parseInt(trim);
-  if (toInt <= -1 || toInt == null){
+  
+  const toInt = Number(trim);
+  
+  if (!Number.isInteger(toInt)){
+    error.classList.add("error-active");
+    return -1;
+  }else if((toInt < 0) || (toInt > 99)){
     error.classList.add("error-active");
     return -1;
   }else{
@@ -167,6 +172,9 @@ const validLocBind = () => {
     validLocEvent(i);
   }
 }
+
+// Validation success.
+
 
 // Final validation
 const validate = () => {
