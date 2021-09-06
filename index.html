@@ -55,62 +55,70 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close" onclick="closeModal();"></span>
           <div class="modal-body">
             <!-- action="index.html" 
              
             -->
             <form
               name="reserve"
-              onsubmit="validate();"
+              onsubmit="return validate()"
               method="get"
              
             >
               <div
                 class="formData">
-                <label>First Name</label><br>
+                <label for="first">First Name</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
                   minlength="2"
+                  
                 /><br>
+                <p class="error-text">First Name must have 2+ characters</p>
               </div>
               <div
                 class="formData">
-                <label>Last Name</label><br>
+                <label for="last">Last Name</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
                 /><br>
+                <p class="error-text">Last Name must have 2+ characters</p>
               </div>
               <div
                 class="formData">
-                <label>Email</label><br>
+                <label for="email">Email</label><br>
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
+                  data-error="First Name must have at least 2 characters"
+                  data-error-visible="false"
                 /><br>
+                <p class="error-text">Please enter a valid email address.</p>
               </div>
               <div
                 class="formData">
-                <label>Birthdate</label><br>
+                <label for="birthdate">Birthdate</label><br>
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <p class="error-text">Please enter a valid birthdate.</p>
               </div>
               <div
                 class="formData">
-                <label>How many tournaments have you attended? </label><br>
+                <label for="quantity">How many tournaments have you attended? </label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p class="error-text">Please enter a valid number.</p>
               </div>
               <p class="text-label">Which location?</p>
               <div
@@ -182,6 +190,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p class="error-text">Please choose a location.</p>
               </div>
 
               <div
@@ -197,6 +206,7 @@
                   I have read and I agree to GameOn's terms and conditions.
                 </label>
                 <br>
+                <p class="error-text">You must check to agree to terms and conditions.</p>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
