@@ -174,27 +174,27 @@ const validLocBind = () => {
 }
 
 // Validation success.
-
+const valSuccess = () => {
+  console.log("hit val");
+  document.getElementsByClassName("modal-body")[0].innerHTML = "<h3> Thank you for submitting your  registration details</h3><button class='btn-submit btn-close' class='button' onclick='closeModal();'>Close</button>";
+}
 
 // Final validation
 const validate = () => {
   
   let val = 0;
   val = val + validNames("first");
-
-  console.log("val = "+val);
-
   val = val + validNames("last");
   val = val + validEmail();
   val = val + validBirthdate();
   val = val + validLocation();
   val = val + validQuantity();
-  //return false;
+  
   if (val < 0){
-    console.log("saw false" + val);
+    valSuccess();
     return false;
   }else{
-    console.log("saw true" + val);
+    valSuccess();
     return false;
   }
   

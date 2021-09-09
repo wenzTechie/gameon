@@ -176,6 +176,7 @@
     margin: 5% auto;
     width: 100%;
     max-width: 500px;
+    min-height: 75%;
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
     background: #232323;
@@ -184,6 +185,9 @@
     position: relative;
     color: #fff;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .modal-body {
@@ -555,3 +559,8 @@
     }
   }
   
+  .btn-close {
+    position: absolute;
+    bottom: 15px;
+    margin: 0 22%;
+  }
