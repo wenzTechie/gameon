@@ -52,13 +52,15 @@ const validEmail = () => {
   const error = target.parentElement.getElementsByClassName("error-text")[0];
   const input = target.value;
   const trim = input.trim();
-  if ((trim.search(/\./) < 1) || trim.search("@") < 1){
-    error.classList.add("error-active");
-    return -1;
-  }else {
+  const testStr = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  if (trim.match(testStr)){
     error.classList.remove("error-active");
     return 0;
+  }else{
+    error.classList.add("error-active");
+    return -1;
   }
+
 }
 
 const validBirthdate = () => {
