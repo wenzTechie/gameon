@@ -191,7 +191,6 @@ const validate = () => {
   val = val + validQuantity();
   
   if (val < 0){
-    valSuccess();
     return false;
   }else{
     valSuccess();
